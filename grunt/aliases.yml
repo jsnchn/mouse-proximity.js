@@ -1,0 +1,5 @@
+default:
+  - uglify
+  - symlink
+  - browserSync
+  - watch

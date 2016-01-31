@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Vanilla Plugin Boilerplate Demo</title>
+</head>
+<body style="padding:20px;text-align:center;">
+    <h1>Vanilla Plugin Boilerplate Demo</h1>
+    <p id="demo">id = demo</p>
+    <p class="demo">class = demo</p>
+    <p class="demo">class = demo</p>
+
+    <script src="/js/mouse-proximity.min.js"></script>
+    <script>
+        var mprox = new mouseProximity(document.getElementsByClassName('demo'), {
+            origin: 'center'
+        });
+        var doSomething = function(el,distance){
+            console.log('vanilla');
+        }
+        mprox.run(doSomething);
+    </script>
+</body>
+</html>

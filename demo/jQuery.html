@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Vanilla Plugin Boilerplate Demo ( + jQuery)</title>
+</head>
+<body style="padding:20px;text-align:center;">
+    <h1>Vanilla Plugin Boilerplate Demo ( + jQuery)</h1>
+    <p class="demo">Plugin is loading...</p>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="/js/mouse-proximity.min.js"></script>
+    <script>
+
+        $('.demo').mouseProximity({
+            origin: 'center'
+        });
+        var doSomething = function(el,distance){
+            console.log('jQuery');
+        }
+        $('.demo').data('mouseProximity').run(doSomething);
+
+    </script>
+</body>
+</html>
