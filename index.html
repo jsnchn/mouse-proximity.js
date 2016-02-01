@@ -40,7 +40,7 @@
             $(this).css({'top':x+'%','left':y+'%'});
         });
         //initialize options here
-        $('.demo').mouseProximity();
+        $('.thing').mouseProximity({});
 
         //callback
         var doSomething = function(el,distance){
@@ -48,7 +48,7 @@
         }
 
         //run the distance tracker
-        $('.demo').data('mouseProximity').run(doSomething);
+        $('.thing').data('mouseProximity').run(doSomething);
 
     </script>
 </body>
