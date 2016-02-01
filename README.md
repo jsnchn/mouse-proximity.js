@@ -1,5 +1,6 @@
 # mouse-proximity.js
 Track the distance between the mouse cursor and multiple elements
+
 [check out an ugly demo](http://www.jsnchn.com/mouse-proximity.js/)
 
 ### install
