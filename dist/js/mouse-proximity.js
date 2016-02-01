@@ -12,9 +12,9 @@
     'use strict';
 
     var defaults = {
-        clear: true,
+        clear: false,
         origin: 'center',
-        showAttribute: false,
+        showAttribute: true,
         cb: function(el,distance){
             console.log(el.outerHTML + ', distance ' + distance);
         }
@@ -99,7 +99,7 @@
         this.calcDist = function(e,i,a) {
             //maths
             e.mouseProximity = Math.floor(Math.sqrt(Math.pow(mpos.x - (offset(e).left+(e.offsetWidth/2)), 2) + Math.pow(mpos.y - (offset(e).top+(e.offsetHeight/2)), 2)));
-            if (showAttribute){
+            if (plugin.options.showAttribute){
                 e.setAttribute('data-mouse-proximity',e.mouseProximity);
             }
             /**

@@ -14,7 +14,7 @@
     var defaults = {
         clear: false,
         origin: 'center',
-        showAttribute: false,
+        showAttribute: true,
         cb: function(el,distance){
             console.log(el.outerHTML + ', distance ' + distance);
         }
