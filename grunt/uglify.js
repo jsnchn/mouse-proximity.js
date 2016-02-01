@@ -1,6 +1,6 @@
 module.exports = {
   options: {
-    // beautify: true
+    beautify: true
   },
   dist: {
     files: {

@@ -2,32 +2,66 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>jQuery Mouse Proximity Demo</title>
+    <title>Mouse Proximity Demo</title>
+    <style>
+        .thing{
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+        }
+        .thing span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .blue{
+            border:2px dotted blue;
+        }
+        .red{
+            border:2px dotted red;
+        }
+        .green{
+            border:2px dotted green;
+        }
+    </style>
 </head>
 <body style="padding:20px;text-align:center;">
-    <h1>jQuery Mouse Proximity Demo</h1>
-    <p class="demo">Plugin is loading...</p>
+    <h1>mouse-proximity.js</h1>
+    <p>Track the distance between the mouse cursor and multiple elements</p>
+    <h3>move your mouse around</h3>
+    <a href="https://github.com/jsnchn/mouse-proximity.js">check it out on github</a>
+
+    <div class="blue thing"><span></span></div>
+    <div class="red thing"><span></span></div>
+    <div class="green thing"><span></span></div>
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="/js/mouse-proximity.min.js"></script>
     <script>
 
-        //set options here
-        $('.demo').mouseProximity({
-            clear: true,
-            origin: 'center',
-            showAttribute: false,
-            cb: //callback can be set here too
+        function getRandomIntInclusive(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        //randomize position
+        $('.thing').each(function(){
+            var x = getRandomIntInclusive(20,80);
+            var y = getRandomIntInclusive(40,80);
+            $(this).css({'top':x+'%','left':y+'%'});
         });
 
         //callback
         var doSomething = function(el,distance){
-            //do something with the element (el)
-            //dow something with the distance (distance)
+            $(el).find('span').text(distance);
         }
 
-        //run the distance tracker
-        $('.demo').data('mouseProximity').run(doSomething);
+        //initialize and run the distance tracker
+        $('.thing').mouseProximity({
+            origin: 'center',
+            showAttribute: true
+        }).run(doSomething);
 
     </script>
 </body>

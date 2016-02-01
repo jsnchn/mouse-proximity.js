@@ -10,9 +10,21 @@
             height: 100px;
             border-radius: 50px;
         }
-        .blue{background-color: blue;}
-        .red{background-color: red;}
-        .green{background-color: green;}
+        .thing span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .blue{
+            border:2px dotted blue;
+        }
+        .red{
+            border:2px dotted red;
+        }
+        .green{
+            border:2px dotted green;
+        }
     </style>
 </head>
 <body style="padding:20px;text-align:center;">
@@ -21,12 +33,12 @@
     <h3>move your mouse around</h3>
     <a href="https://github.com/jsnchn/mouse-proximity.js">check it out on github</a>
 
-    <div class="blue thing"><p></p></div>
-    <div class="red thing"><p></p></div>
-    <div class="green thing"><p></p></div>
+    <div class="blue thing"><span></span></div>
+    <div class="red thing"><span></span></div>
+    <div class="green thing"><span></span></div>
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="http://jsnchn.github.io/mouse-proximity.js/dist/js/mouse-proximity.min.js"></script>
+    <script src="/js/mouse-proximity.min.js"></script>
     <script>
 
         function getRandomIntInclusive(min, max) {
@@ -39,16 +51,17 @@
             var y = getRandomIntInclusive(40,80);
             $(this).css({'top':x+'%','left':y+'%'});
         });
-        //initialize options here
-        $('.thing').mouseProximity({});
 
         //callback
         var doSomething = function(el,distance){
-            $(el).text(distance);
+            $(el).find('span').text(distance);
         }
 
-        //run the distance tracker
-        $('.thing').data('mouseProximity').run(doSomething);
+        //initialize and run the distance tracker
+        $('.thing').mouseProximity({
+            origin: 'center',
+            showAttribute: true
+        }).run(doSomething);
 
     </script>
 </body>

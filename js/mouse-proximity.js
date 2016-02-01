@@ -83,7 +83,7 @@
         var els = this.elements;
         var elCount = this.elements.length;
 
-        console.log('mouse proximity sensing inititalized for:', this.elements);
+        console.log('mouse proximity inititalized for:', els);
 
         this.calcDists = function(ev){
             mouseTrack(ev);
@@ -117,7 +117,6 @@
         run: function(cb) {
             //only set a single listener cause there is only ever one mouse
             this.options.cb = cb ? cb : this.options.cb;
-            this.options.clear = cb ? false : true;
             document.addEventListener("mousemove",this.calcDists,false);
         },
         stop: function() {
@@ -132,14 +131,7 @@
 
         $.fn[pluginName] = function ( options ) {
             options = options || {};
-
-            return this.each(function() {
-                // add plugin to element data
-                if (!$.data(this, pluginName) ) {
-                    options.element = this;
-                    $.data(this, pluginName, new Plugin(this, options));
-                }
-            });
+            return new Plugin(this, options);
         };
     }
 
