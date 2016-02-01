@@ -1,6 +1,6 @@
 {
   "name": "mouse-proximity",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Track the distance between the mouse cursor and multiple elements on a page",
   "main": "dist/js/mouse-proximity.min.js",
   "devDependencies": {
