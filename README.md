@@ -39,13 +39,6 @@ mprox.stop();
 
 ### Use with jQuery
 ```javascript
-//initialize options here
-$('.demo').mouseProximity({
-    clear: true,
-    origin: 'center',
-    showAttribute: false,
-    cb: //callback can be set here too
-});
 
 //callback
 var doSomething = function(el,distance){
@@ -53,11 +46,16 @@ var doSomething = function(el,distance){
     //dow something with the distance (distance)
 }
 
-//run the proximity tracker
-$('.demo').data('mouseProximity').run(doSomething);
+//initialize options here and run proximity tracker
+$('.demo').mouseProximity({
+    clear: true,
+    origin: 'center',
+    showAttribute: false,
+    cb: //callback can be set here too
+}).run(doSomething);
 
 //stop the proximity tracker
-$('.demo').data('mouseProximity').stop();
+$('.demo').mouseProximity().stop(); // !!! the format for method calls in jQuery will change in the future...
 ```
 
 ### Options
