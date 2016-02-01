@@ -12,12 +12,21 @@
 
     <script src="/js/mouse-proximity.min.js"></script>
     <script>
+        //set options here
         var mprox = new mouseProximity(document.getElementsByClassName('demo'), {
-            origin: 'center'
+            clear: true,
+            origin: 'center',
+            showAttribute: false,
+            cb: //callback can be set here too
         });
+
+        //callback
         var doSomething = function(el,distance){
-            console.log('vanilla');
+            //do something with the element (el)
+            //dow something with the distance (distance)
         }
+
+        //run the distance tracker
         mprox.run(doSomething);
     </script>
 </body>

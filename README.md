@@ -1,2 +1,4 @@
 # mouse-proximity.js
-get proximity of your mouse
+Track the distance between the mouse cursor and multiple elements
+
+
