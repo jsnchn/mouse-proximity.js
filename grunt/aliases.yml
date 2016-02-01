@@ -1,5 +1,6 @@
 default:
   - uglify
   - symlink
+  - copy
   - browserSync
   - watch

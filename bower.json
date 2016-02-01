@@ -1,0 +1,23 @@
+{
+  "name": "mouse-proximity.js",
+  "description": "Track the distance between the mouse cursor and multiple elements on a page",
+  "main": "dist/js/mouse-proximity.min.js",
+  "authors": [
+    "Jason Chen"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "mouse",
+    "distance",
+    "mousemove"
+  ],
+  "homepage": "https://github.com/jsnchn/mouse-proximity.js",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

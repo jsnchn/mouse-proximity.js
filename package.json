@@ -1,19 +1,33 @@
 {
-  "name": "dig-mobile",
+  "name": "mouse-proximity.js",
   "version": "1.0.0",
-  "description": "See [LICENSE.md](./LICENSE.md) for license terms and conditions.",
-  "main": "index.js",
+  "description": "Track the distance between the mouse cursor and multiple elements on a page",
+  "main": "dist/js/mouse-proximity.min.js",
+  "devDependencies": {
+    "grunt-browser-sync": "^2.2.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-symlink": "^0.3.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-config": "^0.19.1",
+    "grunt-contrib-copy": "^0.8.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://jsnchn@github.com/jsnchn/mouse-proximity.js.git"
+  },
+  "keywords": [
+    "mouse",
+    "distance",
+    "mousemove"
+  ],
+  "author": "Jason Chen",
   "license": "ISC",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-symlink": "^0.3.0",
-    "grunt-contrib-uglify": "^0.11.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "load-grunt-config": "^0.19.1"
-  }
+  "bugs": {
+    "url": "https://github.com/jsnchn/mouse-proximity.js/issues"
+  },
+  "homepage": "https://github.com/jsnchn/mouse-proximity.js#readme"
 }
