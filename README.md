@@ -70,7 +70,7 @@ $('.demo').data('mouseProximity').stop();
 - default: center
 - set the origin relative to the body of the element from which to calculate distance from the mouse cursor
 
-#### showAttribute [true/false]
+#### showAttribute
 - type: boolean
 - default: true
 - add a *data-mouse-proximity* attribute to the element with its distance data
