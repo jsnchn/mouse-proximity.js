@@ -1,5 +1,5 @@
 {
-  "name": "mouse-proximity.js",
+  "name": "mouse-proximity",
   "version": "1.0.0",
   "description": "Track the distance between the mouse cursor and multiple elements on a page",
   "main": "dist/js/mouse-proximity.min.js",
